@@ -16,6 +16,7 @@
   }
 }
 
+/*
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -25,9 +26,55 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+*/
+
+body {
+  font-family: "TT Commons";
+}
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/*Categories section*/
+
+.scroll-section-outer {
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-section-inner {
+  height: 100vh;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  column-gap: 160px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+/*Features section*/
+
+.boxWidened {
+  transition: 0.5s;
+  width: 600px;
+}
+
+.box {
+  flex: 1;
+  transition: 0.5s;
+}
+
+.active {
+  transition: transform .5s ease;
+  transform: scale(1.2);
+}
+
+.in-active {
+  transition: transform .5s ease;
+  transform: scale(1.0);
 }
